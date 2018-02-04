@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			$("body, html").css({
+				"background-color":"#FFF"
+				
+			});
+			$("h1").css({
+				"text-align":"center",
+				"color":"red",
+				"font-family":"helvetica"
+			});
+			var bgItem2=$("#item2").css('background-color');
+			var cItem2=$("#item2").css('color');
+			if (bgItem2 === cItem2) {
+				$("#item2").css("color","#FFF");
+			}
+		});
+	</script>
+	<style type="text/css">
+	body,html{
+		background-color: #CCC;
+		color:orange;
+		font-family: Arial;
+		margin:0;
+		padding: 0;
+	}
+	#item1{
+		
+		background-color: #F6F6F6;
+		height: 50px;
+		margin:5% auto; 
+		width: 300px;
+	}
+	#item2{
+		display: block;
+		background-color: #000;
+		height: 50px;
+		margin:5% auto; 
+		width: 300px;
+	}
+	</style>
+</head>
+<body>
+	<h1>M&eacute;todo .css() de JQuery</h1>
+	<div id="item1">Item 1</div>
+	<div id="item2">Item 2</div>
+</body>
+</html>

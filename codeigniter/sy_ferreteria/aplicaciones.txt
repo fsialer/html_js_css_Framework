@@ -1,0 +1,3 @@
+*cargar 2 combobox
+*Accion actualizar perfecto de input dropdown,
+excepto el cargar 2 dropdown, radio button

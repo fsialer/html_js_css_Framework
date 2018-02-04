@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			//var almacen=$("#parrafo").html("<strong>Hola JQuery.</strong>");
+			var clase=$("#prueba").attr("id");
+			console.log(clase);
+			//Este metodo ASIGNA un valor
+			$("#prueba").attr("class","ejemplo");
+		});
+
+	</script>
+</head>
+<body>
+	<p id="parrafo"></p>
+	<div id="prueba"></div>
+</body>
+</html>

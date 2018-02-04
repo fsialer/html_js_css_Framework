@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			$("button").on("click",function(){
+				//$("ol li:first").appendTo('ol:first');
+				//$("ol li:last").prependTo('ol:first');
+				//$("ol:first").append($("ol li:first"));
+				//$("ol li:first").insertBefore('#e1');//Agrega elemento antes del div
+				//$("ol li:first").insertAfter('#e1');//agrega elementos despues del div
+
+				//$("#e1").after($("ol li:first"));
+				//var clon=$('ol li:first').clone();//clona ele elmento
+
+				//var nuevo_e=$("<p>Hola mundo</p>")
+
+				//$("#e1").append(nuevo_e);
+				$("ol li:first").remove();
+			})
+		});
+	</script>
+	<style type="text/css">
+	body,html{
+		background-color: #000;
+		color: #FFF;
+		margin: 0;
+		padding: 0;
+	}
+	header{
+		display: block;
+		margin: 0 auto 50px auto;
+		width: 365px;
+	}
+	ol{
+		display: block;
+		width: 500px;
+		margin:0 auto;
+	}
+	ol li{
+		background-color: #088A29;
+		margin: 5px auto;
+		height: 30px;
+		width: 100%;
+	}
+	button{
+		display: block;
+		margin:0 auto;
+		width: 80px;
+	}
+	div{
+		background-color: #FE2E64;
+		height: 50px;
+		display: block;
+		width: 400px;
+		margin: 2px auto;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="img/codigofacilito.png" alt="CF">
+	</header>
+	<ol>
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>
+
+	</ol>
+	<button id="test">ejecutar</button>
+	<div id="e1">
+		<p>Div1</p>
+	</div>
+	<div id="e2">
+		<p>Div2</p>
+	</div>
+</body>
+</html>

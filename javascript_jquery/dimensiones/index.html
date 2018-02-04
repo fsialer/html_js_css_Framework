@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on('ready',function(){
+			//console.log($("header img").width('100'));
+			//console.log($("#e1").height());
+			var pos=$("#e2 p").position();
+			var pos2=$("#e2 p").offset();
+			console.log("Posicion left: "+pos.left+ " Posicion top: "+pos.top);//la posicion del margem
+			console.log("Posicion left: "+pos2.left+ " Posicion top: "+pos2.top);// la posicion del margen + el margen de los elementos dentro
+		})
+	</script>
+	<style type="text/css">
+	body, html{
+		background-color: #000;
+		margin: 0;
+		padding: 0;
+	}
+	header{
+		display: block;
+		margin: 0 auto;
+		width: 365px;
+	}
+	#e1,#e2{
+		background-color: #0080FF;
+		display:block;
+		height: 100px;
+		margin: 20px auto;
+		width: 400px;
+	}
+	#e1{
+		background-color: #FF0040;
+		height: 150px;
+	}
+	#e2{
+		padding: 15px;
+		border-radius: 60px 0 60px 0;
+	}
+	p{
+		margin-left: 10px;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="img/codigofacilito.png" alt="CF">
+	</header>
+	<div id="e1">
+		
+	</div>
+	<div id="e2">
+		<p>Hola amigos</p>
+	</div>
+
+</body>
+</html>

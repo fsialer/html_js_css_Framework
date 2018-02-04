@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+	var caja1bg,v=0;
+		$(document).on("ready",function(){
+			/*$("#caja1").mouseover(function(){
+				caja1bg=$(this).css('background-color')
+				$(this).css({
+					'background-color':'red'
+				})
+			});
+			$("#caja1").mouseout(function(){
+				$(this).css({
+					'background-color':caja1bg
+				})
+			});*/
+			//one ejecuta el evento una sola vez
+			$("#caja1").one('mouseover',function(){
+				caja1bg=$(this).css('background-color');
+				$(this).css({
+					'background-color':'red'
+				});
+			});
+			$("#caja1").on('mouseout',function(){
+				
+				$(this).css({
+					'background-color':caja1bg
+				})
+			});
+			/*var f1=function(){
+				console.log("Pasastes el cursor");
+			};
+			var f2=function(){
+					v++;
+				caja1bg=$(this).css('background-color');
+				$(this).css({
+					'background-color':'red'
+				});
+			};
+
+			$("#caja1").on({
+				'mouseover':f2,
+			'mouseout':function(){
+				$(this).css({
+					'background-color':caja1bg
+				});
+				if (v>=3) {
+					$("#caja1").off('mouseover',f2);
+				}
+			}
+			});*/
+
+			
+		});
+	</script>
+	<style type="text/css">
+	body,html{
+		background-color: #000;
+		font-weight: bold;
+		padding: 0;
+		margin: 0;
+	}
+	header{
+		display: block;
+		margin: 0 auto 50px auto;
+		width: 365px;
+	}
+	button{
+		display: block;
+		margin: 0 auto;
+		width: 80px;
+	}
+	div	{
+		background-color: #FFF;
+		height: 50px;
+		display: block;
+		width: 400px;
+		margin: 2px auto;
+	}
+	</style>
+</head>
+<body>
+	<div id="caja1"></div>
+	
+</body>
+</html>

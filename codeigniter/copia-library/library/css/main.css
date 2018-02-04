@@ -1,0 +1,20 @@
+
+.list_book{
+	
+	height: 382px;
+}
+
+.footer-left{
+	background-color: #333333;
+	color: white;
+	border-style: solid;
+	border-color: #333333;
+}
+.footer-right{
+	border-style: solid;
+	border-color: #333333;
+}
+.avatar{
+	height: 50px;
+	width: 40px;
+}

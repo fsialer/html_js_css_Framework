@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			var pet=$("#main form").attr('action');
+			var met=$("#main form").attr('method');
+			
+			//var nom,m,msj;
+			$("#main form").on('submit',function(e){
+				e.preventDefault();
+				var info=$("#main form").serialize();
+				$.getJSON('json.php',info,function(resp){
+					$.each(resp,function(index,valor){
+						console.log(index+'=>'+valor)
+					});
+				});
+				
+			
+		})
+			})
+	</script>
+
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body,html{
+		font-family: Myriad Pro, Arial;
+		background-color: #111a29;
+		color: #FFF;
+	}
+	#main{
+		display: block;
+		margin: 0 auto;
+		width: 400px;
+	}
+	#main h1{
+		display: block;
+		width: 100%;
+		text-align: center:;
+	}
+	::selection{
+		background-color: #e04c22;
+		color: #FFF;
+	}
+	form{
+		display: block;
+
+	}
+	input,textarea{
+		font-family: Myriad Pro, Arial;
+		color: #FFF;
+		border:0;
+		outline: 0;
+		background-color: #1f61ad;
+		border-radius: 1px;
+		font-size: 20px;
+		margin: 10px auto;
+		width: 95%;
+		display: block;
+		max-height: 100px;
+	}
+	textarea{
+		max-width: 95%;
+		height: 100px;
+	}
+	input[type=submit]{
+		display: inline-block;
+		vertical-align: middle;
+		height: 25px;
+		width: 80%;
+		cursor: pointer;
+	}
+
+	#status img{
+		width: 20px;
+		height: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h1>FORMULACION DE CONTACTOS</h1>
+		<form action="peticion.php" name="fo" method="post">
+			<input type="text" name="nombre" placeholder="nombre..."  />
+			<input type="text" name="mail" placeholder="correo..."  />
+			<textarea name="mensaje" placeholder="mensaje..." =""></textarea>
+			<div style="display: block;width: 60%;margin: 0 auto;">
+				<input type="submit" name="send" value="enviar" />
+				<div id="status"><!-- <img src="img/x.png"> --></div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			$(document).click(function(){
+				//$("#test").addClass("test");//addClass añadir la clase por parametro
+				//$("#test").attr("class","test");
+				//$("#test").removeClass("test");//removeClass remueve la clase
+				$("#test").toggleClass("test");//Si existe la clase la quita, sino existe la agrega
+				if ($("#test").hasClass('test')){ //HasClass si tiene la clase{
+					$("#test").text("Hey!Soy Rojo");
+				}else{
+					$("#test").text(":C");
+				}
+			})
+		});
+	</script>
+	<style type="text/css">
+		.test{
+			background-color:red;
+		}
+	</style>
+</head>
+<body>
+	<div id="test">Click on me</div>
+</body>
+</html>

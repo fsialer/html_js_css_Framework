@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			$.fx.speeds.lento=3000;
+			$.fx.speeds.rapido=100;
+			$("#boton").on('click',function(){
+				$("#ejemplo").fadeOut('lento',function(){
+					
+					$(this).fadeIn('rapido');
+				});
+			})
+
+		});
+
+	</script>
+	<style type="text/css">
+	#ejemplo{
+		background-color: rgb(259,100,100);	
+		height: 200px;		
+		width: 400px;
+	}
+	</style>
+</head>
+<body>
+	<div id="ejemplo"></div>
+	<button id="boton">Mostrar</button>
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			var elem=$("#caja1");
+			$("#btn1").click(function(){
+				//elem.slideDown();
+				elem.fadeIn('slow');
+			});
+			$("#btn2").click(function(){
+				//elem.slideUp();
+				elem.fadeOut(200);
+				//elem.slideToggle();
+			});
+			
+
+		});
+
+	</script>
+	<style type="text/css">
+	#caja1{
+		background-color: rgba(56,56,56,0.8);
+		display: block;
+		height: 80px;
+		margin: 5% auto;
+		width: 400px;
+	}
+	</style>
+</head>
+<body>
+	<div id="caja1"></div>
+	<button id="btn1">Mostrar</button>
+	<button id="btn2">Ocultar</button>
+</body>
+</html>

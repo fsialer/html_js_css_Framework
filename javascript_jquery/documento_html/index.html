@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			
+			//console.log($("#primero").next().text());
+			//console.log($("#test").parent().attr('id'));
+			//console.log($("#padre").children().attr("id"));
+			$("ul li").each(function(index,elemento){
+				console.log("Este elememnto contiene este texto: "+$(elemento).text());
+			})
+			//console.log($("ul li").siblings());
+			//siblings, es para saber quie comparte el mismo padre
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<article id="padre">
+			Hey!! :D
+			<div id="test">Soy el hijo</div>
+		</article>
+	</div>
+	<ul>
+		<li id="primero">Soy el primero</li>
+		<li>Soy el que sigue</li>
+		<li>tercero</li>
+	</ul>
+</body>
+</html>

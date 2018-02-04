@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on('ready',function(){
+			//attr nos permiten obtener o escribir o removerlo
+			//remoeve el valor $("#prueba").removeAttr("class");
+			//$("#prueba").attr("class",function(){
+				//var cadena="Holamundo";
+				//return cadena;
+			//});
+			//var clase=$("#prueba").attr("class");
+			//console.log(clase);
+			$('a').on('click',function(e){
+				e.preventDefault();
+				var link=$(this).attr("href");
+				alert("Estas saliendo");
+				location.href=link;
+			});
+		})
+	</script>
+	
+</head>
+<body>
+	<div id="prueba" class="pruebaClass"></div>
+	<a href="http://codigofacilito.com/">Codigo facilito</a>
+	<form>
+		<input type="" />
+		<input type="submit" />
+	</form>
+</body>
+</html>

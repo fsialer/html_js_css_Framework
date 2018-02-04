@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body style="background-color: black;">
+	<canvas id="mi-canvas"></canvas>
+	<script type="text/javascript" src="snowflakes.js"></script>
+	<script type="text/javascript">
+		var canvas=document.getElementById('mi-canvas');
+		canvas.width=window.screen.availWidth;
+		canvas.height=window.screen.availHeight;
+
+		var imagen=new Image();
+		imagen.onload=function(){
+			var rain=new Rain('mi-canvas',this);
+			rain.let_it_snow();
+		}
+		imagen.src="snowflake.png";
+	</script>
+
+</body>
+</html>
